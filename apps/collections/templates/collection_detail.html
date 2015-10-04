@@ -6,58 +6,45 @@
 
 {% block content %}
 
-<script>
-$(document).ready(function () {
-    $("#accordion").accordion({
-        heightStyle: "content",
-        collapsible: true
-     });
-});
-</script>
-
-<script type="text/javascript" src="{% static 'highslide/highslide.js' %}"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'highslide/highslide.css' %}" />
-
-<style type="text/css">
-    #model{
-    display: inline-block;
-    }
-    #modelIMG{
-    border: 1px solid grey;
-    width: 300px;
-    padding: 0px;
-    margin: 2px;
-    }
-    #model p{
-    position: absolute;
-    padding: 5px;
-    margin: 0px;
-    color: 3399CC;
-    font: bold 20px Helvetica, Sans-Serif;
-    }
-</style>
-
-
 <h2>{{ object.name }}</h2>
-
-<div id="accordion">
-    {% if for_woman %}
-        <h3>Женские</h3>
-        <div class="col-md-12">
-            {% for img in for_woman %}
-                {% include "include/item.html" %}
-            {% endfor %}
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  {% if for_woman %}
+        <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Женские
+            </a>
+          </h4>
         </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+             {% for img in for_woman %}
+                    {% include "include/item.html" %}
+                {% endfor %}
+          </div>
+        </div>
+      </div>
     {% endif %}
 
     {% if for_man %}
-        <h3>Мужские</h3>
-        <div class="col-md-12">
-
-            {% for img in for_man %}
-                {% include "include/item.html" %}
-            {% endfor %}
+        <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Мужские
+            </a>
+          </h4>
         </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+             {% for img in for_man %}
+                    {% include "include/item.html" %}
+                {% endfor %}
+          </div>
+        </div>
+      </div>
     {% endif %}
+</div>
 
 {% endblock content %}

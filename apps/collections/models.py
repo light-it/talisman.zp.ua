@@ -12,6 +12,10 @@ class Gallery(models.Model):
     year = models.IntegerField(verbose_name=_(u"Год"))
     name = models.CharField(max_length="256", verbose_name=_(u"Название"))
 
+    image = models.ImageField(blank=True, null=True, verbose_name=_(u"Изображение для карусели"))
+    image_url = models.URLField(blank=True, null=True, verbose_name=_(u"Сслыка изображения для карусели"))
+    featured = models.BooleanField(default=True, verbose_name=_(u"Показывать в карусели"))
+
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.year)
 
@@ -40,6 +44,8 @@ class GalleryImage(models.Model):
 
     category = models.ForeignKey(Category)
     gallery = models.ForeignKey(Gallery)
+
+    recommended = models.BooleanField(default=False)
 
     def __unicode__(self):
         return u"%s: %s %s %s" % (self.category, self.title, self.sex, self.price)

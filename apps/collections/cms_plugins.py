@@ -4,7 +4,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
 
-from .models import Gallery
+from .models import Gallery, GalleryImage
 
 
 class CollectionsListPlugin(CMSPluginBase):
@@ -19,4 +19,15 @@ class CollectionsListPlugin(CMSPluginBase):
         return ctx
 
 
+class CollectionsCarousel(CMSPluginBase):
+    model = CMSPlugin
+    render_template = "carousel.html"
+    cache = False
+
+    def render(self, context, instance, placeholder):
+        ctx = super(CollectionsCarousel, self).render(context, instance, placeholder)
+        ctx['images'] = GalleryImage.objects.filter(recommended=True)
+        return ctx
+
 plugin_pool.register_plugin(CollectionsListPlugin)
+plugin_pool.register_plugin(CollectionsCarousel)

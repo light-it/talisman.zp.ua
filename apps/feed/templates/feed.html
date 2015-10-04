@@ -1,8 +1,16 @@
 <div>
     {% for article in news %}
-    <h2>{{ article.title }} </h2>
-    <div>
-        <p> {{ article.excerpt|safe  }} </p>
+    <div class="news-body">
+        <h4 class="news-title">{{ article.title }}
+            <span class="news-date pull-right">{{ article.pub_date }}</span>
+        </h4>
+
+        <div class="news-text" id="news-{{ article.id }}">
+            <p class="lead">
+                {{ article.excerpt|safe }}
+            </p>
+
+        </div>
     </div>
     {% endfor %}
 
