@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load staticfiles %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+<script>
+$(document).ready(function () {
+    $("#accordion").accordion({
+        heightStyle: "content",
+        collapsible: true
+     });
+});
+</script>
+
+<script type="text/javascript" src="{% static 'highslide/highslide.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'highslide/highslide.css' %}" />
+
+<style type="text/css">
+    #model{
+    display: inline-block;
+    }
+    #modelIMG{
+    border: 1px solid grey;
+    width: 300px;
+    padding: 0px;
+    margin: 2px;
+    }
+    #model p{
+    position: absolute;
+    padding: 5px;
+    margin: 0px;
+    color: 3399CC;
+    font: bold 20px Helvetica, Sans-Serif;
+    }
+</style>
+
+
+<h2>{{ object.name }}</h2>
+
+<div id="accordion">
+    {% if for_woman %}
+        <h3>Женские</h3>
+        <div class="col-md-12">
+            {% for img in for_woman %}
+                {% include "include/item.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if for_man %}
+        <h3>Мужские</h3>
+        <div class="col-md-12">
+
+            {% for img in for_man %}
+                {% include "include/item.html" %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock content %}

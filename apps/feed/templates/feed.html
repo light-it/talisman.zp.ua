@@ -1,0 +1,9 @@
+<div>
+    {% for article in news %}
+    <h2>{{ article.title }} </h2>
+    <div>
+        <p> {{ article.excerpt|safe  }} </p>
+    </div>
+    {% endfor %}
+
+</div>

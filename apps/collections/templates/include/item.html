@@ -1,0 +1,9 @@
+<div class="col-md-4">
+        <div class="pull-right">{{ img.title }}{% if img.price %}, {{ img.price }} грн. {% endif %}
+        </div>
+        <div class="pull-right">
+        <a href="{{ img.image_url }}" class="highslide" onclick="return hs.expand(this)">
+                <img src="{{ img.image_small_url }}" id="modelIMG"/>
+        </a>
+        </div>
+</div>
