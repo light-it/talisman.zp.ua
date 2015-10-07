@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<h1>{% trans 'Коллекции' %}</h1>
+<ul>
+{% for coll in object_list %}
+    <li><a href="{% url 'collection-detail' coll.id %}">{{ coll.year }} - {{ coll.name }}</a></li>
+{% empty %}
+    <li>{% trans 'Пока-что пусто' %}</li>
+{% endfor %}
+</ul>
+{% endblock %}

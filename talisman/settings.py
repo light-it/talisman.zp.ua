@@ -145,6 +145,7 @@ INSTALLED_APPS = (
     'djangocms_teaser',
     'djangocms_video',
     'cmsplugin_newsplus',
+    'bootstrapform',
     'reversion',
     'talisman',
     'apps.feed',

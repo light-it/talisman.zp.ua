@@ -26,7 +26,7 @@ class CollectionsCarousel(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         ctx = super(CollectionsCarousel, self).render(context, instance, placeholder)
-        ctx['images'] = GalleryImage.objects.filter(recommended=True)
+        ctx['collections'] = Gallery.objects.filter(featured=True)
         return ctx
 
 plugin_pool.register_plugin(CollectionsListPlugin)

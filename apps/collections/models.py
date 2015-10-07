@@ -16,6 +16,9 @@ class Gallery(models.Model):
     image_url = models.URLField(blank=True, null=True, verbose_name=_(u"Сслыка изображения для карусели"))
     featured = models.BooleanField(default=True, verbose_name=_(u"Показывать в карусели"))
 
+    def get_image_url(self):
+        return self.image.url if self.image else self.image_url
+
     def __unicode__(self):
         return "%s (%s)" % (self.name, self.year)
 
