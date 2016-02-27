@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-__author__ = 'fennel'
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
 
-from .models import Gallery, GalleryImage
+from .models import Gallery
 
 
 class CollectionsListPlugin(CMSPluginBase):
@@ -14,7 +13,7 @@ class CollectionsListPlugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         ctx = super(CollectionsListPlugin, self).render(context, instance, placeholder)
-        ctx['collections'] = Gallery.objects.all()[:10]
+        ctx['collections'] = Gallery.objects.all().order_by('-pk')[:10]
         ctx['total'] = Gallery.objects.count()
         return ctx
 

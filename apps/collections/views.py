@@ -1,24 +1,15 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import DetailView, CreateView, ListView
 from datetime import datetime
+
+from django.forms import modelformset_factory
+from django.forms.formsets import formset_factory
+from django.views.generic import DetailView, CreateView, ListView, UpdateView
+
+from .forms import CollectionForm, ImageForm, ExternalImageForm
 from .models import Gallery, GalleryImage
 
-from django.forms import ModelForm
-from django.forms.formsets import formset_factory
-
-
-class CollectionForm(ModelForm):
-    class Meta:
-        model = Gallery
-        fields = ['year', 'name', 'image', 'featured']
-
-
-class ImageForm(ModelForm):
-    class Meta:
-        model = GalleryImage
-        fields = ['image', 'title', 'model', 'price', 'sex', 'category']
-
 ImageFormSet = formset_factory(ImageForm, extra=3, can_order=True)
+ModelImageFormset = modelformset_factory(GalleryImage, ExternalImageForm, can_delete=True)
 
 
 class GalleryDetailView(DetailView):
@@ -29,12 +20,33 @@ class GalleryDetailView(DetailView):
         ctx = super(GalleryDetailView, self).get_context_data(**kwargs)
         ctx['for_man'] = self.object.galleryimage_set.filter(sex='m')
         ctx['for_woman'] = self.object.galleryimage_set.filter(sex='w')
+        ctx['other'] = self.object.galleryimage_set.filter(sex__isnull=True)
         return ctx
 
 
 class GalleryHome(ListView):
     template_name = 'collections_home.html'
     queryset = Gallery.objects.order_by('-pk')
+
+
+class GalleryImagesEdit(UpdateView):
+    template_name = 'wizard/collection_edit.html'
+    form_class = CollectionForm
+    model = Gallery
+
+    def post(self, request, *args, **kwargs):
+        main_form = CollectionForm(data=request.POST, files=request.FILES)
+        image_forms = ModelImageFormset(request.POST, request.FILES)
+
+        if image_forms.is_valid() and main_form.is_valid():
+            image_forms.save()
+
+        return super(GalleryImagesEdit, self).post(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        ctx = super(GalleryImagesEdit, self).get_context_data(**kwargs)
+        ctx['image_formset'] = ModelImageFormset(queryset=self.object.galleryimage_set.all())
+        return ctx
 
 
 class GalleryWizard(CreateView):
@@ -61,7 +73,6 @@ class GalleryWizard(CreateView):
         ctx = super(GalleryWizard, self).get_context_data(**kwargs)
         ctx['image_form'] = ImageForm()
         ctx['image_formset'] = ImageFormSet()
-
         return ctx
 
     def get_initial(self):

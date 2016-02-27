@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <script src="{% static 'jquery-ui/jquery-ui.min.css' %}"></script>
+        <link rel="stylesheet" href="{% static 'jquery-ui/jquery-ui.min.css' %}">
 
         <link rel="stylesheet" href="{% static 'css/theme.css' %} ">
 
@@ -34,13 +34,7 @@
                     <ul class="nav navbar-nav">
                         {% show_menu 0 1 100 100 "menu.html" %}
                     </ul>
-
-                     <div class="nav navbar-nav pull-right">
-                        <a class="btn btn-success ancestor" href="{% url 'collection-add' %}">{% trans "Новая галерия" %}</a>
-                     </div>
                 </div>
-
-
             </div>
             {% block content %}{% endblock content %}
         </div>

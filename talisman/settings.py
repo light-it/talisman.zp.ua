@@ -149,7 +149,9 @@ INSTALLED_APPS = (
     'reversion',
     'talisman',
     'apps.feed',
-    'apps.collections'
+    'apps.ftp_import',
+    'apps.collections',
+
 )
 
 THUMBNAIL_PROCESSORS = (

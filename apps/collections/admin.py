@@ -1,4 +1,3 @@
-__author__ = 'fennel'
 from django.contrib import admin
 from .models import Gallery, GalleryImage, Category
 

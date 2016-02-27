@@ -2,7 +2,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-sex = (('m', _(u'Мужские')), ('w', _(u'Женские')))
+SEX_CHOICES = (('m', _(u'Мужские')), ('w', _(u'Женские')))
 
 
 class Gallery(models.Model):
@@ -43,9 +43,9 @@ class GalleryImage(models.Model):
     title = models.CharField(max_length="256", blank=True, null=True, verbose_name=_(u"Заголовок"))
     model = models.CharField(max_length="256", blank=True, null=True, verbose_name=_(u"Модель"))
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name=_(u"Цена"))
-    sex = models.CharField(max_length="256", blank=True, null=True, choices=sex, verbose_name=_(u"Пол"))
+    sex = models.CharField(max_length="256", blank=True, null=True, choices=SEX_CHOICES, verbose_name=_(u"Пол"))
 
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, null=True)
     gallery = models.ForeignKey(Gallery)
 
     recommended = models.BooleanField(default=False)

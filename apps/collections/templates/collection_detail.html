@@ -45,6 +45,25 @@
         </div>
       </div>
     {% endif %}
+
+    {% if other %}
+        <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+              Разное
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+             {% for img in other %}
+                    {% include "include/item.html" %}
+                {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
 </div>
 
 {% endblock content %}

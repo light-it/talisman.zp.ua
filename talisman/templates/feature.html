@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags %}
+{% load cms_tags i18n %}
 
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
@@ -7,6 +7,17 @@
     <div class="jumbotron">
         {% placeholder "feature" %}
     </div>
+
+            {% if request.user.is_superuser %}
+                <div class="container admin-panel">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                        <a class="btn btn-success ancestor" href="{% url 'collection-add' %}">{% trans "Новая галерея" %}</a>
+                        <a class="btn btn-success ancestor" href="{% url 'ftp-collection-import' %}">{% trans "Импортировать FTP" %}</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
     <div>
         {% placeholder "content" %}
     </div>

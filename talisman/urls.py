@@ -14,6 +14,7 @@ urlpatterns = i18n_patterns('',
         {'sitemaps': {'cmspages': CMSSitemap}}),
     url(r'^select2/', include('django_select2.urls')),
     url(r'^', include('apps.collections.urls')),
+    url(r'^', include('apps.ftp_import.urls')),
     url(r'^news/', include('cmsplugin_newsplus.urls')),
     url(r'^', include('cms.urls')),
 
