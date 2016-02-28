@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31249fb0-238d-462b-ab7e-ef18c42cf96a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talisman/prod.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/settings.py" afterPath="$PROJECT_DIR$/talisman/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/wsgi.py" afterPath="$PROJECT_DIR$/talisman/wsgi.py" />
     </list>
     <ignored path="talisman.zp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +66,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/talisman/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6312366">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5314534">
+              <caret line="190" column="68" selection-start-line="190" selection-start-column="68" selection-end-line="190" selection-end-column="68" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -150,9 +148,9 @@
         <option value="$PROJECT_DIR$/apps/collections/templates/collection_detail.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/talisman/prod.py" />
-        <option value="$PROJECT_DIR$/talisman/settings.py" />
         <option value="$PROJECT_DIR$/talisman/local.py" />
         <option value="$PROJECT_DIR$/talisman/wsgi.py" />
+        <option value="$PROJECT_DIR$/talisman/settings.py" />
       </list>
     </option>
   </component>
@@ -785,8 +783,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/talisman/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6312366">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5314534">
+          <caret line="190" column="68" selection-start-line="190" selection-start-column="68" selection-end-line="190" selection-end-column="68" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

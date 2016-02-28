@@ -187,7 +187,10 @@ CMS_TEMPLATES = (
 CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
-DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL'))
+DATABASES ={
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
+
 
 MIGRATION_MODULES = {
     'djangocms_flash': 'djangocms_flash.migrations_django',
