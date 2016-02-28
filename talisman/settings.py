@@ -196,9 +196,6 @@ DATABASES = {
     }
 }
 
-
-
-
 MIGRATION_MODULES = {
     'djangocms_flash': 'djangocms_flash.migrations_django',
     'djangocms_file': 'djangocms_file.migrations_django',
