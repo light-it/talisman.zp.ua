@@ -1,7 +1,6 @@
 import os
-import dj_database_url
-
 gettext = lambda s: s
+
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
 Django settings for talisman project.
@@ -23,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'hf&(sh_gi=0qgk=^ip3-z%4lq9=1+zqsdz7ot#42tp9e+*8v_m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
@@ -33,13 +32,7 @@ ALLOWED_HOSTS = ['talisman.herokuapp.com', 'talisman.zp.ua']
 # Application definition
 
 ROOT_URLCONF = 'talisman.urls'
-
-WSGI_APPLICATION = 'talisman.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
+# WSGI_APPLICATION = 'talisman.wsgi.application'
 
 
 # Internationalization
