@@ -1,4 +1,7 @@
 import os
+
+import dj_database_url
+
 gettext = lambda s: s
 
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -32,7 +35,7 @@ ALLOWED_HOSTS = ['talisman.herokuapp.com', 'talisman.zp.ua']
 # Application definition
 
 ROOT_URLCONF = 'talisman.urls'
-# WSGI_APPLICATION = 'talisman.wsgi.application'
+WSGI_APPLICATION = 'talisman.wsgi.application'
 
 
 # Internationalization
@@ -179,14 +182,7 @@ CMS_PERMISSION = True
 CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.environ.get('DB_HOST'),
-        'NAME': os.environ.get('DB_NAME'),
-        'PASSWORD': os.environ.get('DB_PASS'),
-        'PORT': os.environ.get('DB_PASS'),
-        'USER': os.environ.get('DB_USER')
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 MIGRATION_MODULES = {
