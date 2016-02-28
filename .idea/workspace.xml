@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31249fb0-238d-462b-ab7e-ef18c42cf96a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/talisman/prod.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/wsgi.py" afterPath="$PROJECT_DIR$/talisman/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/settings.py" afterPath="$PROJECT_DIR$/talisman/settings.py" />
     </list>
     <ignored path="talisman.zp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +58,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/talisman/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23427331">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.88286334">
+              <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,7 +121,6 @@
         <option value="$PROJECT_DIR$/apps/collections/forms.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/talisman/local.py" />
-        <option value="$PROJECT_DIR$/talisman/settings.py" />
         <option value="$PROJECT_DIR$/apps/collections/views.py" />
         <option value="$PROJECT_DIR$/apps/collections/templates/include/item.html" />
         <option value="$PROJECT_DIR$/talisman/static/css/theme.css" />
@@ -133,6 +130,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/talisman/prod.py" />
         <option value="$PROJECT_DIR$/talisman/wsgi.py" />
+        <option value="$PROJECT_DIR$/talisman/settings.py" />
       </list>
     </option>
   </component>
@@ -772,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/talisman/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23427331">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.88286334">
+          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding />
         </state>
       </provider>

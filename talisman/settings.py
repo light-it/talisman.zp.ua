@@ -215,9 +215,3 @@ try:
     from talisman.local import *
 except ImportError:
     pass
-
-
-try:
-    from talisman.prod import *
-except ImportError:
-    pass
