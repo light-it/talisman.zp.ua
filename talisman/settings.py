@@ -1,7 +1,5 @@
 import os
 
-import dj_database_url
-
 gettext = lambda s: s
 
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -182,7 +180,14 @@ CMS_PERMISSION = True
 CMS_PLACEHOLDER_CONF = {}
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': 'ec2-54-247-167-90.eu-west-1.compute.amazonaws.com',
+        'NAME': 'df0dgn81asr1p5',
+        'PASSWORD': '2hCCcJTgsvD_VmiNO342q9sfok',
+        'PORT': '5432',
+        'USER': 'rtjvqfekiuizpc'
+    }
 }
 
 MIGRATION_MODULES = {
