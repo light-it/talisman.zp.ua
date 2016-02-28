@@ -13,9 +13,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -187,9 +184,19 @@ CMS_TEMPLATES = (
 CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
-DATABASES ={
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_NAME'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'PORT': os.environ.get('DB_PASS'),
+        'USER': os.environ.get('DB_USER')
+    }
 }
+
+
 
 
 MIGRATION_MODULES = {
