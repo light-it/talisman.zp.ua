@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31249fb0-238d-462b-ab7e-ef18c42cf96a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/prod.py" afterPath="$PROJECT_DIR$/talisman/prod.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/talisman/prod.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/settings.py" afterPath="$PROJECT_DIR$/talisman/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talisman/wsgi.py" afterPath="$PROJECT_DIR$/talisman/wsgi.py" />
     </list>
     <ignored path="talisman.zp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,14 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="prod.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/talisman/prod.py">
+      <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21475054">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,7 +39,17 @@
         <entry file="file://$PROJECT_DIR$/talisman/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,11 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/talisman/settings.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.6312366">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="local.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talisman/local.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="21" />
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -120,17 +142,17 @@
         <option value="$PROJECT_DIR$/apps/collections/models.py" />
         <option value="$PROJECT_DIR$/apps/collections/forms.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/talisman/local.py" />
         <option value="$PROJECT_DIR$/apps/collections/views.py" />
         <option value="$PROJECT_DIR$/apps/collections/templates/include/item.html" />
         <option value="$PROJECT_DIR$/talisman/static/css/theme.css" />
         <option value="$PROJECT_DIR$/talisman/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/collections/templates/collections.html" />
         <option value="$PROJECT_DIR$/apps/collections/templates/collection_detail.html" />
-        <option value="$PROJECT_DIR$/talisman/wsgi.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/talisman/settings.py" />
         <option value="$PROJECT_DIR$/talisman/prod.py" />
+        <option value="$PROJECT_DIR$/talisman/settings.py" />
+        <option value="$PROJECT_DIR$/talisman/local.py" />
+        <option value="$PROJECT_DIR$/talisman/wsgi.py" />
       </list>
     </option>
   </component>
@@ -406,20 +428,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/talisman/static/highslide/highslide.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talisman/static/highslide/highslide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="380" column="9" selection-start-line="380" selection-start-column="3" selection-end-line="380" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/talisman/local/lib/python2.7/site-packages/cmsplugin_newsplus/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52654386">
@@ -644,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talisman/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/collections/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -742,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talisman/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -758,20 +751,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talisman/settings.py">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="21" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talisman/prod.py">
+    <entry file="file://$PROJECT_DIR$/talisman/local.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21475054">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talisman/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="66" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talisman/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6312366">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

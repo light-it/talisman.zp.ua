@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -25,11 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'hf&(sh_gi=0qgk=^ip3-z%4lq9=1+zqsdz7ot#42tp9e+*8v_m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['talisman.herokuapp.com', 'talisman.zp.ua']
 
 
 # Application definition
@@ -186,17 +187,7 @@ CMS_TEMPLATES = (
 CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
-    }
-}
+DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL'))
 
 MIGRATION_MODULES = {
     'djangocms_flash': 'djangocms_flash.migrations_django',
