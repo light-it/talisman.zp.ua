@@ -13,4 +13,7 @@ sys.path.append("/home/fennel/.virtualenvs/talisman/lib/python2.7/site-packages"
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "talisman.settings")
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
+
 application = get_wsgi_application()
+application = DjangoWhiteNoise(application)
