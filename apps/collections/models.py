@@ -15,6 +15,7 @@ class Gallery(models.Model):
     image = models.ImageField(blank=True, null=True, verbose_name=_(u"Изображение для карусели"))
     image_url = models.URLField(blank=True, null=True, verbose_name=_(u"Сслыка изображения для карусели"))
     featured = models.BooleanField(default=True, verbose_name=_(u"Показывать в карусели"))
+    description = models.CharField(max_length=1024, null=True, blank=True, verbose_name=_(u"Описание"))
 
     def get_image_url(self):
         return self.image.url if self.image else self.image_url

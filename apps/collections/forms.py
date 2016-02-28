@@ -5,9 +5,11 @@ from .models import Gallery, GalleryImage, SEX_CHOICES
 
 
 class CollectionForm(forms.ModelForm):
+    description = forms.CharField(widget=forms.Textarea(), label=u'Описание')
+
     class Meta:
         model = Gallery
-        fields = ['year', 'name', 'image', 'featured']
+        fields = ['year', 'name', 'image', 'featured', 'description']
 
 
 class ImageForm(forms.ModelForm):

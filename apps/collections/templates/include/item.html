@@ -1,13 +1,13 @@
-<div class="col-md-4">
+<div class="col-md-4 col-sm-6">
 
-        <div class="pull-right">
                 {% if img.title %}
-                        {{ img.title }}{% if img.price %}, {{ img.price }} грн. {% endif %}
+                        <spna class="item-title">{{ img.title }}</spna>
                 {% endif %}
-        </div>
-        <div class="pull-right">
                 <a href="{{ img.image_url }}" class="highslide" onclick="return hs.expand(this)">
                         <img src="{{ img.image_small_url }}" class="model-img" />
                 </a>
-        </div>
+
+                <span class="item-price">
+                        {% if img.price %}{{ img.price }} грн. {% endif %}
+                </span>
 </div>

@@ -1,12 +1,21 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load staticfiles %}
-
+{% load i18n %}
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
-
-<h2>{{ object.name }}</h2>
+<script type="text/javascript">
+    hs.graphicsDir = '{% static "highslide/graphics/" %}';
+</script>
+<h2>{{ object.name }} {% if request.user.is_superuser %} <a href="{% url 'collection-edit' object.pk %}" class="btn btn-default pull-right">{% trans 'Редактировать' %}</a> {% endif %}</h2>
+{% if object.description %}
+<div class="row">
+    <div class="col-md-12 collection-description">
+        {{ object.description }}
+    </div>
+</div>
+{% endif %}
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   {% if for_woman %}
         <div class="panel panel-default">

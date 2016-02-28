@@ -34,10 +34,6 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-
-
-
-
 ROOT_URLCONF = 'talisman.urls'
 
 WSGI_APPLICATION = 'talisman.wsgi.application'
@@ -213,3 +209,15 @@ MIGRATION_MODULES = {
     'djangocms_style': 'djangocms_style.migrations_django',
     'djangocms_teaser': 'djangocms_teaser.migrations_django'
 }
+
+
+try:
+    from talisman.local import *
+except ImportError:
+    pass
+
+
+try:
+    from talisman.prod import *
+except ImportError:
+    pass

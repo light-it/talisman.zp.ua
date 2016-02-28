@@ -1,8 +1,9 @@
+{% load i18n %}
 <div>
         <div>
             {% for collection in collections %}
                 <h3><a href="{% url 'collection-detail' collection.id %}">{{ collection }}</a></h3>
             {% endfor %}
         </div>
-    <div>Всего {{ total }}</div>
+    <div>{% trans 'Всего' %} {{ total }}</div>
 </div>

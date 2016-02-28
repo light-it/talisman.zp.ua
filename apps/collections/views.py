@@ -4,6 +4,7 @@ from datetime import datetime
 from django.forms import modelformset_factory
 from django.forms.formsets import formset_factory
 from django.views.generic import DetailView, CreateView, ListView, UpdateView
+from django.core.urlresolvers import reverse
 
 from .forms import CollectionForm, ImageForm, ExternalImageForm
 from .models import Gallery, GalleryImage
@@ -13,6 +14,9 @@ ModelImageFormset = modelformset_factory(GalleryImage, ExternalImageForm, can_de
 
 
 class GalleryDetailView(DetailView):
+    """
+    Gallery Detail page
+    """
     template_name = 'collection_detail.html'
     model = Gallery
 
@@ -25,11 +29,17 @@ class GalleryDetailView(DetailView):
 
 
 class GalleryHome(ListView):
+    """
+    Gallery Home
+    """
     template_name = 'collections_home.html'
     queryset = Gallery.objects.order_by('-pk')
 
 
 class GalleryImagesEdit(UpdateView):
+    """
+    Gallery edit page
+    """
     template_name = 'wizard/collection_edit.html'
     form_class = CollectionForm
     model = Gallery
@@ -48,8 +58,15 @@ class GalleryImagesEdit(UpdateView):
         ctx['image_formset'] = ModelImageFormset(queryset=self.object.galleryimage_set.all())
         return ctx
 
+    def get_success_url(self):
+        return reverse('collection-detail', args=[self.object.pk])
+
 
 class GalleryWizard(CreateView):
+    """
+    New Gallery Wizard
+    WIP
+    """
     template_name = 'wizard/collection_wizard.html'
     form_class = CollectionForm
     success_url = '/'
